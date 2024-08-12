@@ -1,0 +1,64 @@
+﻿/* GridView styles */
+.table-responsive {
+    margin-top: 20px;
+    overflow-x: auto; /* Ensures that the table is scrollable on smaller screens */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #ffffff;
+}
+
+.table td, .table th {
+    border: 1px solid #dee2e6;
+}
+
+.table .btn {
+    margin: 0;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .pagination a, .pagination span {
+        padding: 8px 16px;
+        border: 1px solid #dee2e6;
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 2px;
+        font-size: 14px;
+    }
+
+        .pagination a:hover {
+            background-color: #e9ecef;
+        }
+
+    .pagination .active {
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+    }

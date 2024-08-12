@@ -1,0 +1,52 @@
+﻿body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.sidenav {
+    background-color: #f8f9fa; /* Light gray background for the sidenav */
+}
+
+    .sidenav a {
+        color: #000000; /* Black text color */
+    }
+
+        .sidenav a:hover {
+            background-color: #dddddd; /* Slightly lighter background on hover */
+        }
+
+.table {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+    .table th, .table td {
+        border-color: #dddddd;
+    }
+
+    .table thead th {
+        background-color: #f1f1f1;
+    }
+
+    .table tbody tr {
+        background-color: #ffffff;
+    }
+
+        .table tbody tr:hover {
+            background-color: #dddddd;
+        }
+
+
+
+.navbar, .nav-container, .main {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.styled-name {
+    color: #000000;
+}
+
+.openbtn {
+    color: #000000;
+}

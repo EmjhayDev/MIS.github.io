@@ -1,0 +1,297 @@
+﻿/* Header styles */
+.header {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333333; /* Dark text color for contrast */
+    padding: 20px; /* Padding around content */
+    border-bottom: 1px solid #ddd; /* Light gray bottom border */
+    text-align: center; /* Center align text */
+}
+
+    /* Style for the header title */
+    .header h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 24px; /* Font size for the title */
+        color: #333333; /* Dark text color */
+    }
+
+/* Styles for the main content area */
+.main {
+    transition: margin-left 0.3s;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align items at the top */
+    height: calc(100vh - 60px); /* Full height minus header height */
+    margin-top: 60px; /* Margin to account for header space */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+
+}
+
+/* Dashboard content */
+.dashboard-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .dashboard-content h2 {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-content .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard-content .card {
+        margin: 10px;
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-content .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .dashboard-content .card-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-content .card-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+        color: #777;
+    }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 8px;
+    }
+
+    .dashboard-content {
+        padding: 10px;
+    }
+
+        .dashboard-content .card-body {
+            height: auto;
+        }
+
+        .dashboard-content .card {
+            min-width: 100%;
+            max-width: 100%;
+        }
+}
+
+/* The sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa; /* Light gray background color */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 1px solid #ddd; /* Optional: Adds a light gray border to the right edge */
+}
+
+    /* Sidenav links */
+    .sidenav a {
+        padding: 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #000; /* Black text color */
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+        /* Sidenav link hover effect */
+        .sidenav a:hover {
+            color: #333; /* Darker color on hover */
+        }
+
+        /* Sidenav icons */
+        .sidenav a i {
+            margin-right: 16px;
+        }
+
+    /* The close button */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 10px; /* Adjust top for vertical alignment */
+        right: 25px;
+        font-size: 36px;
+        color: #000; /* Black color for the close button */
+        cursor: pointer;
+    }
+
+/* Add custom styles for your name here */
+.styled-name {
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 16px; /* Font size */
+    color: #007bff; /* Text color */
+    font-weight: bold; /* Font weight */
+    text-align: left; /* Text alignment */
+    margin-top: 10; /* Margin to add space around */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Text shadow for a subtle effect */
+}
+
+/* From Uiverse.io by Galahhad */
+/* switch settings 👇 */
+
+.ui-switch {
+    /* switch */
+    --switch-bg: rgb(135, 150, 165);
+    --switch-width: 48px;
+    --switch-height: 20px;
+    /* circle */
+    --circle-diameter: 32px;
+    --circle-bg: rgb(0, 56, 146);
+    --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+    .ui-switch input {
+        display: none;
+    }
+
+.slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background: var(--switch-bg);
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+}
+
+    .slider .circle {
+        top: calc(var(--circle-inset) * -1);
+        left: 0;
+        width: var(--circle-diameter);
+        height: var(--circle-diameter);
+        position: absolute;
+        background: var(--circle-bg);
+        border-radius: inherit;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+        ;
+    }
+
+        .slider .circle::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: inherit;
+            -webkit-transition: all 500ms;
+            -o-transition: all 500ms;
+            transition: all 500ms;
+            opacity: 0;
+        }
+
+/* actions */
+
+.ui-switch input:checked + .slider .circle {
+    left: calc(100% - var(--circle-diameter));
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+}
+
+.ui-switch input:active + .slider .circle::before {
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+.openbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    display: inline-block;
+}
+
+    .openbtn div {
+        width: 35px;
+        height: 4px;
+        background-color: #fff; /* Changed to white */
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 2px; /* Optional: rounds the edges for a sleeker look */
+    }
+
+    .openbtn .bar1 {
+        transform-origin: top left;
+    }
+
+    .openbtn .bar3 {
+        transform-origin: bottom left;
+    }
+
+/* Rotate and animate the lines to create an "X" when the menu is open */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

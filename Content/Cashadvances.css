@@ -1,0 +1,60 @@
+﻿/* Container for buttons */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the end */
+    width: 100%; /* Full width to ensure alignment */
+    margin-top: 20px; /* Add space above the button container */
+    padding: 10px; /* Add padding inside the container */
+}
+
+/* Spacing between buttons */
+.btn-spacing {
+    margin-left: 15px; /* Increase space between buttons */
+}
+
+/* Style for the primary button */
+.btn-primary {
+    background-color: #007bff; /* Primary button background color */
+    border-color: #007bff; /* Primary button border color */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    padding: 12px 24px; /* Increased padding for better size */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        border-color: #004a8c; /* Darker border color on hover */
+    }
+
+/* Style for the danger button */
+.btn-danger {
+    background-color: #dc3545; /* Danger button background color */
+    border-color: #dc3545; /* Danger button border color */
+    color: #fff; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    padding: 12px 24px; /* Increased padding for better size */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+    .btn-danger:hover {
+        background-color: #c82333; /* Darker red on hover */
+        border-color: #bd2130; /* Darker border color on hover */
+    }
+
+/* Responsive adjustments for buttons */
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: flex-end; /* Align items to the end */
+    }
+
+    .btn-spacing {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin for vertical stacking */
+    }
+}

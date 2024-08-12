@@ -1,0 +1,271 @@
+﻿/* The sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #343a40; /* Dark background color for sidenav */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 1px solid #ddd; /* Optional: Adds a light gray border to the right edge */
+}
+
+    /* Sidenav links */
+    .sidenav a {
+        padding: 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #f1f1f1; /* Light color for text in sidenav */
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+        /* Sidenav link hover effect */
+        .sidenav a:hover {
+            color: #ccc; /* Slightly lighter color on hover */
+        }
+
+        /* Sidenav icons */
+        .sidenav a i {
+            margin-right: 16px;
+        }
+
+    /* The close button */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 10px; /* Adjust top for vertical alignment */
+        right: 25px;
+        font-size: 36px;
+        color: #f1f1f1; /* Light color for the close button */
+        cursor: pointer;
+    }
+
+    /* Button to open the sidenav */
+    .sidenav .openbtn {
+        font-size: 30px;
+        cursor: pointer;
+        color: #111;
+        background: transparent;
+        border: none;
+        position: fixed;
+        top: 15px; /* Adjust top for vertical alignment */
+        left: 15px; /* Adjust left for horizontal alignment */
+        z-index: 2;
+    }
+
+/* Main content area */
+#mainContent {
+    transition: margin-left 0.3s; /* Smooth transition for margin-left */
+    padding: 20px;
+}
+
+/* Default: Sidebar closed */
+.sidebar-closed .sidenav {
+    width: 0;
+}
+
+.sidebar-closed #mainContent {
+    margin-left: 0;
+}
+
+/* Sidebar open state */
+.sidebar-open .sidenav {
+    width: 250px; /* Sidebar width */
+}
+
+.sidebar-open #mainContent {
+    margin-left: 250px; /* Space for the sidebar */
+}
+
+/* Submenu styles */
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+    .submenu a {
+        font-size: 18px; /* Smaller font size for submenu */
+        padding: 12px;
+    }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 0;
+    }
+
+    .sidebar-open .sidenav {
+        width: 100%; /* Sidebar takes full width on small screens */
+    }
+
+    .sidebar-open #mainContent {
+        margin-left: 0; /* No margin on small screens */
+    }
+
+    .sidenav a {
+        font-size: 18px; /* Smaller text size for smaller screens */
+        padding: 12px;
+    }
+
+    .sidenav .closebtn {
+        font-size: 30px; /* Smaller close button for smaller screens */
+        right: 15px;
+    }
+
+    .openbtn {
+        font-size: 24px; /* Slightly smaller hamburger icon */
+        top: 10px;
+        left: 10px;
+    }
+
+    #mainContent {
+        padding: 15px; /* Adjust padding for main content on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidenav a {
+        font-size: 16px; /* Even smaller text size for very small screens */
+        padding: 10px;
+    }
+
+    .sidenav .closebtn {
+        font-size: 24px; /* Smaller close button for very small screens */
+        right: 10px;
+    }
+
+    .openbtn {
+        font-size: 20px; /* Smaller hamburger icon */
+        top: 8px;
+        left: 8px;
+    }
+
+    #mainContent {
+        padding: 10px; /* Adjust padding for main content on very small screens */
+    }
+}
+
+/* Additional tweaks for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+/* Styles for nav-container to align items */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items to left and right */
+    align-items: center; /* Vertically center items */
+    padding: 10px; /* Adjust padding as needed */
+    background-color: #1e1e1e; /* Dark background color to contrast with sidenav */
+    height: 36px;
+}
+
+/* Style for username label */
+.styled-name {
+    font-size: 16px;
+    color: #f1f1f1; /* Light color for text in nav-container */
+    margin: 0 20px; /* Margin for spacing */
+}
+
+/* Ensure the open button is positioned correctly */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Weather container styles */
+.weather-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Light gray border to match the sidenav border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* For positioning clouds */
+    overflow: hidden; /* Hide overflowing clouds */
+    text-align: center; /* Center align text */
+}
+
+    .weather-container h3 {
+        margin-bottom: 20px; /* Increased margin for separation */
+        font-size: 2rem; /* Larger font size for headings */
+        color: #343a40; /* Dark color for headings */
+        font-family: 'Arial', sans-serif; /* Font for heading */
+    }
+
+    .weather-container p {
+        margin: 10px 0; /* Increased margin for spacing between paragraphs */
+        font-size: 1.2rem; /* Slightly larger font size for better readability */
+        color: #495057; /* Slightly darker text color for contrast */
+        font-family: 'Arial', sans-serif; /* Font for paragraphs */
+    }
+
+    .weather-container span {
+        font-weight: bold;
+        color: #007bff; /* Accent color for values */
+        font-size: 1.2rem; /* Match font size with paragraph */
+    }
+
+/* Cloud styles */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through clouds */
+    background-color: transparent; /* Make background transparent */
+}
+
+.cloud {
+    position: absolute;
+    background: url('../images/cloud.png') no-repeat; /* Use transparent PNG */
+    background-size: contain;
+    animation: moveClouds 20s linear infinite;
+    opacity: 0.7; /* Slightly transparent clouds */
+}
+
+.cloud1 {
+    width: 150px;
+    height: 90px;
+    top: 10%;
+    left: 5%;
+    animation-duration: 15s;
+}
+
+.cloud2 {
+    width: 200px;
+    height: 120px;
+    top: 30%;
+    left: 50%;
+    animation-duration: 25s;
+}
+
+.cloud3 {
+    width: 120px;
+    height: 70px;
+    top: 60%;
+    left: 75%;
+    animation-duration: 20s;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+}
+

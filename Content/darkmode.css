@@ -1,0 +1,143 @@
+﻿/* General body styling for dark mode */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark mode styling for forms */
+input, textarea, select, button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+    input:focus, textarea:focus, select:focus {
+        border-color: #ffffff;
+        outline: none;
+    }
+
+    button:hover {
+        background-color: #555555;
+    }
+
+/* Additional styling for form elements within containers */
+.nav-container, .main {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Sidenav specific styling */
+.sidenav {
+    background-color: #1e1e1e;
+}
+
+    .sidenav a {
+        color: #ffffff;
+    }
+
+        .sidenav a:hover {
+            background-color: rgb(0 0 0 / 0.00);
+            color: #ffffff;
+        }
+
+/* Table styling for dark mode */
+.table {
+    background-color: #1e1e1e;
+}
+
+    .table th, .table td {
+        border-color: #333333;
+        color: #000000;
+    }
+
+    .table thead th {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    .table tbody tr {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+
+        .table tbody tr:hover {
+            background-color: #575757;
+        }
+
+/* Style for username label */
+.styled-name {
+    color: #ffffff;
+}
+
+/* Dark mode styling for main content */
+#mainContent {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Dark mode styling for dashboard content */
+.dashboard-content h2,h3 {
+    color: #000000;
+}
+
+/* Dark mode styling for card elements */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Dark mode styling for card body */
+.card-body {
+    color: #ffffff;
+}
+
+/* Dark mode styling for card title */
+.card-title {
+    color: #ffffff;
+}
+
+/* Dark mode styling for card text */
+.card-text {
+    color: #ffffff;
+}
+
+/* Ensure responsiveness with Bootstrap */
+.row {
+    margin: 0 -15px;
+}
+
+.col-md-3 {
+    padding: 15px;
+}
+
+/* Styling for weather section */
+#weather {
+    background-color: #1e1e1e; /* Dark background for weather section */
+    color: #ffffff; /* Light text color */
+    border: 1px solid #333333; /* Dark border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the weather section */
+    margin-bottom: 20px; /* Space below the weather section */
+}
+
+/* Weather description styling */
+#weather-description {
+    font-size: 18px; /* Font size for description */
+}
+
+/* Weather temperature styling */
+#weather-temp {
+    font-size: 18px; /* Font size for temperature */
+}
+
+/* Weather city styling */
+#weather-city {
+    font-size: 18px; /* Font size for city name */
+}
